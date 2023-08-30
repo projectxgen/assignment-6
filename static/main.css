@@ -1,0 +1,39 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+.bg-main {
+    background-color: hsl(185, 41%, 84%);
+}
+
+/* - Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */
+
+.bg-very-dark-cyan {
+    background-color: hsl(183, 100%, 15%);
+}
+
+.bg-dark-grayish-cyan {
+    background-color: hsl(186, 14%, 43%);
+}
+
+.bg-light-grayish-cyan {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.bg-very-light-grayish-cyan {
+    background-color: hsl(189, 41%, 97%);
+}
+
+.bg-strong-cyan {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.bg-white {
+    background-color: hsl(0, 0%, 100%);
+}
+
