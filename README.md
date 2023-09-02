@@ -66,6 +66,31 @@ Please reach out to us if you face any difficulties. Good luck.
 
 ## Reference
 
-Please refer to the link below in order to understand about how Flask communicate with the client-side to get the value of the button.
+Please refer to the link below in order to understand about how Flask communicate with the client-side to get the value of the button from the code below.
 
-https://predictivehacks.com/?all-tips=how-to-add-action-buttons-in-flask
+```python
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
+@app.route("/", methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        if request.form.get('action1') == 'VALUE1':
+            pass # do something
+        elif  request.form.get('action2') == 'VALUE2':
+            pass # do something else
+        else:
+            pass # unknown
+    elif request.method == 'GET':
+        return render_template('index.html', form=form)
+    
+    return render_template("index.html")
+```
+
+```html
+<h3>Our Flask Buttons<h3/>
+<form method="post" action="/">
+    <input type="submit" value="VALUE1" name="action1"/>
+    <input type="submit" value="VALUE2" name="action2" />
+</form>
+```
