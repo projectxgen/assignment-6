@@ -13,42 +13,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-main">
-    <div>
+    <div class="lg:flex lg:flex-col lg:justify-center lg:items-center lg:w-10/12 lg:max-w-screen-2xl lg:mx-auto">
       <h1 class="text-center">SPLITTER</h1>
-      <form method="POST">
-        <div class="bg-white py-4">
-          <div class="flex flex-col w-10/12 mx-auto">
-            <label class="mb-2">Bill</label>
-            <div>
-              <input type="text" name="bill" placeholder="0.00" value="{{context.amount}}" class="text-right px-2 py-2 w-full bg-slate-200 rounded-lg"/>
+      <form method="POST" class="lg:w-full">
+        <div class="bg-white py-4 lg:grid lg:grid-cols-2 lg:gap-x-5 lg:rounded-xl">
+          <div>
+            <div class="flex flex-col w-10/12 mx-auto">
+              <label class="mb-2">Bill</label>
+              <div>
+                <input type="text" name="bill" placeholder="0.00" value="{{context.amount}}" class="text-right px-2 py-2 w-full bg-slate-200 rounded-lg"/>
+              </div>
             </div>
-          </div>
 
-          <div class="w-10/12 mx-auto my-4">
-            <label>Select Tip %</label>
-            <div class="grid grid-cols-3 gap-x-5 gap-y-5 mt-2">
-              <input type="submit" value="5%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
-              <input type="submit" value="10%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
-              <input type="submit" value="15%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
-              <input type="submit" value="25%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
-              <input type="submit" value="50%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+            <div class="w-10/12 mx-auto my-4">
+              <label>Select Tip %</label>
+              <div class="grid grid-cols-3 gap-x-5 gap-y-5 mt-2">
+                <input type="submit" value="5%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+                <input type="submit" value="10%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+                <input type="submit" value="15%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+                <input type="submit" value="25%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+                <input type="submit" value="50%" name="tips" class="hover:cursor-pointer px-4 py-2 hover:bg-strong-cyan bg-green-900 rounded-lg w-24 text-white" />
+              </div>
             </div>
-          </div>
-          
-          <div class="w-10/12 mx-auto my-4">
-            <label>Number of People</label>
-            <input type="text" name="people" placeholder="0" value="{{context.people}}" class="text-right px-2 py-2 w-full bg-slate-200 rounded-lg mt-2" />
+            
+            <div class="w-10/12 mx-auto my-4">
+              <label>Number of People</label>
+              <input type="text" name="people" placeholder="0" value="{{context.people}}" class="text-right px-2 py-2 w-full bg-slate-200 rounded-lg mt-2" />
+            </div>
           </div>
 
           <div class="w-10/12 mx-auto bg-green-900 py-4 rounded-lg my-4">
             <div class="flex items-center justify-between px-4 py-4">
               <p class="text-white">Tip Amount <br /><span class="text-slate-300"> / person</span></p>
-              <p>{{context.tip}}</p>
+              <p class="text-white text-2xl">{{context.tip}}</p>
             </div>
 
             <div class="flex items-center justify-between px-4 py-4">
               <p class="text-white">Total <br /><span class="text-slate-300"> / person</span></p>
-              <p>{{context.total}}</p>
+              <p class="text-white text-2xl">{{context.total}}</p>
             </div>
             
             <input type="submit" value="RESET" name="reset" class="bg-green-100 w-11/12 mx-auto flex justify-center px-4 py-2 mb-4 rounded-lg font-bold text-green-900 hover:cursor-pointer"/>
